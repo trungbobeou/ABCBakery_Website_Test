@@ -128,9 +128,8 @@ AOS.init({
           direction === "down" &&
           !$(this.element).hasClass("ftco-animated")
         ) {
-          var comma_seperator_number_step = $.animateNumber.numberStepFactories.separator(
-            ","
-          );
+          var comma_seperator_number_step =
+            $.animateNumber.numberStepFactories.separator(",");
           $(".number").each(function () {
             var $this = $(this),
               num = $this.data("number");
@@ -190,8 +189,13 @@ AOS.init({
   contentWayPoint();
 
   $("#book_date").datepicker({
-    format: "m/d/yyyy",
+    format: "d/m/yyyy",
     autoclose: true,
   });
   $("#book_time").timepicker();
+
+  $(".nav-item").click(function () {
+    $(".nav-item").removeClass("cta");
+    $(this).toggleClass("cta");
+  });
 })(jQuery);
