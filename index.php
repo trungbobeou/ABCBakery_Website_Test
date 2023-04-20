@@ -32,9 +32,6 @@
 
 <body>
     <button onclick="topFunction()" id="btn-scrollToTop">Top</button>
-
-   
-    
     
     <!-- navigation starts -->
     <?php include 'pages/nav.html';?>
